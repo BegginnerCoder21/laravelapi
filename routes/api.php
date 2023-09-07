@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\StoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,6 @@ Route::prefix('invoices')
         ->group(function () {
 
             Route::get('/',IndexController::class)->name('index');
+            Route::post('/store',StoreController::class)->name('Store');
             
         });
